@@ -25,7 +25,7 @@ class RomanNumeralCalculator
     myNumber.to_s!
     myPlaceNumber = 10**(myNumber.length-1)
     myNumber.each_char do |c|
-      myNResult += calculateDigit (myNumber, myPlaceNumber)
+      myNResult += calculateDigit (c, myPlaceNumber)
       myPlaceNumber = myPlaceNumber.to_i / 10
     end
   end

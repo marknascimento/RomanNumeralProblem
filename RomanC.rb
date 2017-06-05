@@ -10,7 +10,7 @@ class RomanNumeralCalculator
       myLetters = ["M",""]
     end
     if myAmount.to_i < 4
-      myAmount.to_s.times {myDResult += myLetters[1]}
+      myAmount.to_i.times {myDResult += myLetters[1]}
     elsif myAmount.to_i == 4
       myDResult = myLetters[1] + myLetters[2]
     elsif myAmount.to_i == 5

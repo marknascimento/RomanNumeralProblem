@@ -11,7 +11,7 @@ class RomanNumeralCalculator
     end
     if myAmount.to_i == 9
       myDResult =  myLetters[0] + myLetters[2]	  
-    elsif myAmount.to_i > 6
+    elsif myAmount.to_i >= 6
       myDResult = "" + myLetters[1]
       myAmount.to_i -= 5
       myAmount.to_i.times {myDResult += myLetters[0]}
@@ -24,7 +24,7 @@ class RomanNumeralCalculator
     elsif myAmount.to_i == 0
       myDResult = ""
     end
-	return myDResult
+    return myDResult
   end
   def calculateNumber (myNumber)
     myNumber = myNumber.to_s
@@ -33,7 +33,7 @@ class RomanNumeralCalculator
       myNResult += calculateDigit (ch, myPlaceNumber)
       myPlaceNumber = myPlaceNumber.to_i / 10
     end
-	return myNResult
+    return myNResult
   end
 end
 
